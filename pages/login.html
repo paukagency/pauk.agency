@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кабинет инфлюенсера — Pauk.Agency</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+
+  <main class="main" id="main">
+    <section class="section auth-section">
+      <div class="auth-card" id="authCard">
+        <!-- LOGIN FORM -->
+        <div class="auth-panel" id="loginPanel">
+          <div class="auth-card__logo">
+            <span class="logo-mark" style="width:44px;height:44px;font-size:22px;">P</span>
+          </div>
+          <h2 class="auth-card__title" data-i18n="login_title">Войти в кабинет</h2>
+          <p class="auth-card__sub" data-i18n="login_sub">Lorem ipsum dolor sit amet, consectetur adipiscing — личный кабинет инфлюенсера.</p>
+          <form class="contact-form" onsubmit="return false;" style="margin-top:8px;">
+            <input class="form-input" type="email" data-i18n-placeholder="form_email" placeholder="Email" autocomplete="email" />
+            <input class="form-input" type="password" data-i18n-placeholder="login_password" placeholder="Пароль" autocomplete="current-password" />
+            <button class="btn btn--primary" type="submit" style="width:100%;justify-content:center;" data-i18n="btn_signin">Войти</button>
+          </form>
+          <p class="auth-switch"><span data-i18n="no_account">Нет аккаунта?</span> <button class="auth-switch-btn" onclick="switchPanel('register')" data-i18n="btn_register_link">Зарегистрироваться</button></p>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div class="auth-panel" id="registerPanel" style="display:none;">
+          <div class="auth-card__logo">
+            <span class="logo-mark" style="width:44px;height:44px;font-size:22px;">P</span>
+          </div>
+          <h2 class="auth-card__title" data-i18n="reg_title">Стать партнёром</h2>
+          <p class="auth-card__sub" data-i18n="reg_sub">Lorem ipsum dolor sit amet, consectetur adipiscing — присоединяйтесь к сотням инфлюенсеров.</p>
+          <form class="contact-form" onsubmit="return false;" style="margin-top:8px;">
+            <input class="form-input" type="text" data-i18n-placeholder="reg_name" placeholder="Ваше имя" autocomplete="name" />
+            <input class="form-input" type="email" data-i18n-placeholder="form_email" placeholder="Email" autocomplete="email" />
+            <input class="form-input" type="text" data-i18n-placeholder="reg_social" placeholder="Instagram / YouTube / TikTok (ссылка)" />
+            <input class="form-input" type="password" data-i18n-placeholder="reg_password" placeholder="Придумайте пароль" autocomplete="new-password" />
+            <button class="btn btn--primary" type="submit" style="width:100%;justify-content:center;" data-i18n="btn_register">Зарегистрироваться</button>
+          </form>
+          <p class="auth-switch"><span data-i18n="have_account">Уже есть аккаунт?</span> <button class="auth-switch-btn" onclick="switchPanel('login')" data-i18n="btn_login_link">Войти</button></p>
+        </div>
+      </div>
+
+      <!-- PREVIEW of dashboard for non-logged users -->
+      <div class="dashboard-preview">
+        <p class="section__eyebrow" style="margin-bottom:20px;" data-i18n="dashboard_preview_label">Личный кабинет инфлюенсера — превью</p>
+        <div class="dashboard-preview__grid">
+          <div class="stat-card">
+            <span class="stat-card__num">—</span>
+            <span class="stat-card__label" data-i18n="stat_installs_label">Установок по вашим кодам</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">—</span>
+            <span class="stat-card__label" data-i18n="stat_promos_label">Активных промокодов</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">—</span>
+            <span class="stat-card__label" data-i18n="stat_payout_label">К выплате</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">—</span>
+            <span class="stat-card__label" data-i18n="stat_date_label">Дата выплаты</span>
+          </div>
+        </div>
+        <div class="dashboard-preview__blur-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:20px;height:20px;flex-shrink:0;">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          <span data-i18n="locked_note">Войдите, чтобы увидеть свою статистику</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span data-i18n="footer_rights">© 2026 Pauk.Agency. Все права защищены.</span>
+    </footer>
+  </main>
+
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    function switchPanel(to) {
+      document.getElementById('loginPanel').style.display = to === 'login' ? '' : 'none';
+      document.getElementById('registerPanel').style.display = to === 'register' ? '' : 'none';
+    }
+  </script>
+</body>
+</html>

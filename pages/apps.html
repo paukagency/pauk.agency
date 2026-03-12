@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Приложения — Pauk.Agency</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+
+  <main class="main" id="main">
+    <section class="section">
+      <div class="section__header">
+        <p class="section__eyebrow" data-i18n="apps_page_eyebrow">Продукты</p>
+        <h1 class="section__title"><span data-i18n="apps_page_title">Все </span><span class="accent-gradient" data-i18n="apps_page_title_accent">приложения</span></h1>
+        <p class="section__desc" data-i18n="apps_page_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Выберите приложение для продвижения и сгенерируйте свой промокод.</p>
+      </div>
+
+      <div class="apps-catalog">
+        <a href="app-detail.html" class="catalog-card">
+          <div class="catalog-card__header" style="background:linear-gradient(135deg,#d4f542,#a8e000);">
+            <svg viewBox="0 0 56 56" fill="none"><rect x="12" y="12" width="32" height="32" rx="8" fill="white" opacity=".9"/><path d="M22 28l5 5 9-10" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__top">
+              <h3 data-i18n="app1_name">AppName One</h3>
+              <span class="badge" data-i18n="badge_active">Активно</span>
+            </div>
+            <p data-i18n="app_card_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <div class="catalog-card__stats">
+              <div><span class="cs-num">12%</span><span class="cs-label" data-i18n="commission_label">Комиссия</span></div>
+              <div><span class="cs-num">30 дн.</span><span class="cs-label" data-i18n="payout_period">Выплата</span></div>
+              <div><span class="cs-num">4.8 ★</span><span class="cs-label" data-i18n="rating_label">Рейтинг</span></div>
+            </div>
+            <span class="btn btn--primary" data-i18n="app_view">Подробнее о приложении</span>
+          </div>
+        </a>
+
+        <a href="app-detail.html" class="catalog-card">
+          <div class="catalog-card__header" style="background:linear-gradient(135deg,#f5f542,#d4e000);">
+            <svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="16" fill="white" opacity=".9"/><path d="M28 20v8l5 5" stroke="#333" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__top">
+              <h3 data-i18n="app2_name">AppName Two</h3>
+              <span class="badge" data-i18n="badge_active">Активно</span>
+            </div>
+            <p data-i18n="app_card_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <div class="catalog-card__stats">
+              <div><span class="cs-num">10%</span><span class="cs-label" data-i18n="commission_label">Комиссия</span></div>
+              <div><span class="cs-num">30 дн.</span><span class="cs-label" data-i18n="payout_period">Выплата</span></div>
+              <div><span class="cs-num">4.6 ★</span><span class="cs-label" data-i18n="rating_label">Рейтинг</span></div>
+            </div>
+            <span class="btn btn--primary" data-i18n="app_view">Подробнее о приложении</span>
+          </div>
+        </a>
+
+        <a href="app-detail.html" class="catalog-card">
+          <div class="catalog-card__header" style="background:linear-gradient(135deg,#42f5a8,#00d4a0);">
+            <svg viewBox="0 0 56 56" fill="none"><rect x="14" y="8" width="28" height="40" rx="6" fill="white" opacity=".9"/><line x1="20" y1="22" x2="36" y2="22" stroke="#333" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="29" x2="30" y2="29" stroke="#333" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__top">
+              <h3 data-i18n="app3_name">AppName Three</h3>
+              <span class="badge" data-i18n="badge_active">Активно</span>
+            </div>
+            <p data-i18n="app_card_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <div class="catalog-card__stats">
+              <div><span class="cs-num">15%</span><span class="cs-label" data-i18n="commission_label">Комиссия</span></div>
+              <div><span class="cs-num">30 дн.</span><span class="cs-label" data-i18n="payout_period">Выплата</span></div>
+              <div><span class="cs-num">4.9 ★</span><span class="cs-label" data-i18n="rating_label">Рейтинг</span></div>
+            </div>
+            <span class="btn btn--primary" data-i18n="app_view">Подробнее о приложении</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <footer class="footer">
+      <span data-i18n="footer_rights">© 2026 Pauk.Agency. Все права защищены.</span>
+      <span data-i18n="footer_tagline">Серийный выпуск мобильных приложений</span>
+    </footer>
+  </main>
+
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
