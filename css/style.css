@@ -1171,9 +1171,15 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 600px) auto;
+  grid-template-columns: minmax(0, 600px) 1fr;
   gap: 48px;
   align-items: stretch;
+}
+
+.app-detail-hero__visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .app-detail-hero__left {
@@ -1199,12 +1205,6 @@ a.btn:hover::after { transform: translateX(4px); }
 }
 
 .app-detail-icon svg { width: 56px; height: 56px; }
-
-.app-detail-hero__visual {
-  display: flex;
-  align-items: center;
-  padding: 0 64px 0 0;
-}
 
 .app-detail-hero__img {
   width: 270px;
