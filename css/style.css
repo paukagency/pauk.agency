@@ -1559,7 +1559,7 @@ a.btn:hover::after { transform: translateX(4px); }
   .btn-login { padding: 12px 14px; font-size: 14px; border-radius: 12px; }
   .sidebar__nav { flex: 0 0 auto; }
   .sidebar__lang { margin-bottom: 20px; }
-  .sidebar { padding-bottom: 0; }
+  .sidebar { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
 }
 
 @media (max-width: 1400px) {
