@@ -42,12 +42,11 @@ const PA_I18N = (() => {
 
   function preventWidows(text) {
     if (!text || text.length < 6) return text;
-    // Bind short prepositions/articles (1–3 chars) to the following word,
-    // using lookbehind so consecutive short words are all caught
-    let out = text.replace(/(?<=^|\s)(\S{1,3}) /g, '$1\u00A0');
-    // Also bind the very last word to the one before it
-    out = out.replace(/[ \u00A0](\S+)\s*$/, '\u00A0$1');
-    return out;
+    const trailing = text.match(/\s*$/)[0];
+    let out = text.trimEnd();
+    out = out.replace(/(?<=^|\s)(\S{1,3}) /g, '$1\u00A0');
+    out = out.replace(/[ \u00A0](\S+)$/, '\u00A0$1');
+    return out + trailing;
   }
 
   function applyTranslations() {
