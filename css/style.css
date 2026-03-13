@@ -1594,6 +1594,7 @@ a.btn:hover::after { transform: translateX(4px); }
   .contact-block { grid-template-columns: 1fr; gap: 40px; }
   .apps-catalog { grid-template-columns: 1fr; }
   .app-detail-hero__top { flex-direction: column; }
+  .app-detail-hero__text { width: 100%; }
   .app-detail-features { grid-template-columns: 1fr; }
 }
 
