@@ -1561,7 +1561,12 @@ a.btn:hover::after { transform: translateX(4px); }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
   .apps-catalog { grid-template-columns: repeat(2, 1fr); }
   .app-detail-hero { padding-right: 64px; }
-  .app-detail-hero__visual { display: none; }
+  .app-detail-hero__visual {
+    position: relative;
+    width: 270px;
+    height: 500px;
+    margin-top: 32px;
+  }
   .auth-section { grid-template-columns: 1fr; }
 }
 
@@ -1578,6 +1583,11 @@ a.btn:hover::after { transform: translateX(4px); }
 @media (max-width: 720px) {
   .section { padding: 40px 24px; }
   .footer { padding: 24px; flex-direction: column; gap: 6px; text-align: center; }
+  .app-detail-hero__visual {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 270 / 550;
+  }
   .steps { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .hero__stats { grid-template-columns: repeat(2, 1fr); }
