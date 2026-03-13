@@ -1579,7 +1579,8 @@ a.btn:hover::after { transform: translateX(4px); }
   }
   .app-detail-hero__img {
     width: 220px;
-    height: 440px;
+    height: auto;
+    aspect-ratio: 270 / 550;
     flex-shrink: 0;
     border-radius: 20px;
     overflow: hidden;
@@ -1617,6 +1618,7 @@ a.btn:hover::after { transform: translateX(4px); }
   .app-detail-hero__img {
     flex: 1;
     height: auto;
+    width: auto;
     aspect-ratio: 270 / 550;
     border-radius: 20px;
     overflow: hidden;
