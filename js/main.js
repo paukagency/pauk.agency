@@ -14,6 +14,9 @@
   const backdrop  = document.getElementById('sidebarBackdrop');
 
   function openMenu() {
+    sidebar.style.display = 'flex';
+    // Force reflow so transform transition fires
+    sidebar.offsetHeight;
     sidebar.classList.add('mobile-open');
     burgerBtn.classList.add('open');
     burgerBtn.setAttribute('aria-expanded', true);
@@ -27,6 +30,13 @@
     burgerBtn.setAttribute('aria-expanded', false);
     if (backdrop) backdrop.classList.remove('visible');
     document.body.style.overflow = '';
+    // Hide after transition ends
+    sidebar.addEventListener('transitionend', function handler() {
+      if (!sidebar.classList.contains('mobile-open')) {
+        sidebar.style.display = '';
+      }
+      sidebar.removeEventListener('transitionend', handler);
+    });
   }
 
   if (burgerBtn && sidebar) {
@@ -36,6 +46,10 @@
 
     // Close on backdrop click
     if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+    // Close button inside sidebar
+    var closeBtn = document.getElementById('sidebarCloseBtn');
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
 
     // Close on nav item click (navigate away)
     sidebar.addEventListener('click', (e) => {
