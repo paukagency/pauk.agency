@@ -1171,10 +1171,16 @@ a.btn:hover::after { transform: translateX(4px); }
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
 
 .app-detail-hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.app-detail-hero__top {
   display: flex;
   align-items: flex-start;
   gap: 24px;
@@ -1192,6 +1198,103 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-icon svg { width: 56px; height: 56px; }
 
+/* ---- Phone Mockup ---- */
+.phone-mockup {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.phone-frame {
+  width: 230px;
+  background: linear-gradient(160deg, #2e2e32 0%, #1a1a1c 60%, #222226 100%);
+  border-radius: 52px;
+  padding: 14px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 40px 80px rgba(0,0,0,0.45),
+    0 8px 24px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* Power button */
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 130px;
+  width: 4px;
+  height: 68px;
+  background: #28282c;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Volume buttons */
+.phone-frame::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 100px;
+  width: 4px;
+  height: 38px;
+  background: #28282c;
+  border-radius: 3px 0 0 3px;
+  box-shadow: 0 56px 0 #28282c, 0 104px 0 #28282c;
+}
+
+.phone-screen {
+  background: #0a0a0a;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 9 / 19.5;
+}
+
+.phone-island {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88px;
+  height: 28px;
+  background: #000;
+  border-radius: 14px;
+  z-index: 3;
+}
+
+.phone-screenshot {
+  position: absolute;
+  inset: 0;
+}
+
+.phone-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.phone-screenshot__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(0,0,0,0.35);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.phone-screenshot__placeholder svg {
+  width: 36px;
+  height: 36px;
+  opacity: 0.35;
+}
+
 .app-detail-hero__desc {
   font-size: 15px;
   color: var(--clr-text-muted);
@@ -1204,7 +1307,6 @@ a.btn:hover::after { transform: translateX(4px); }
   background: var(--clr-surface);
   border-radius: var(--radius);
   padding: 24px;
-  min-width: 280px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1507,6 +1609,8 @@ a.btn:hover::after { transform: translateX(4px); }
   .contact-block { grid-template-columns: 1fr; gap: 40px; }
   .apps-catalog { grid-template-columns: 1fr; }
   .app-detail-hero__left { flex-direction: column; }
+  .app-detail-hero__top { flex-direction: column; }
+  .phone-mockup { display: none; }
   .app-detail-features { grid-template-columns: 1fr; }
 }
 
