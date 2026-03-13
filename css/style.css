@@ -1170,7 +1170,7 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-hero {
   position: relative;
-  padding-right: calc(270px + 64px + 64px);
+  padding-right: calc(270px * 2 + 16px + 64px + 64px);
 }
 
 .app-detail-hero__visual {
@@ -1178,17 +1178,21 @@ a.btn:hover::after { transform: translateX(4px); }
   top: 64px;
   right: 64px;
   bottom: 64px;
-  width: 270px;
+  width: calc(270px * 2 + 16px);
+  display: flex;
+  gap: 16px;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.app-detail-hero__img {
+  flex: 1;
+  min-width: 0;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.app-detail-hero__img {
-  width: 100%;
-  height: 100%;
-}
-
-.app-detail-hero__img--second { display: none; }
+.app-detail-hero__img--second { display: block; }
 
 .app-detail-hero__left .back-link { margin-bottom: 0; }
 
@@ -1603,18 +1607,18 @@ a.btn:hover::after { transform: translateX(4px); }
   .section { padding: 40px 24px; }
   .footer { padding: 24px; flex-direction: column; gap: 6px; text-align: center; }
   .app-detail-hero__visual {
-    display: block;
+    display: flex;
     width: 100%;
     height: auto;
   }
   .app-detail-hero__img {
-    width: 100%;
+    flex: 1;
     height: auto;
     aspect-ratio: 270 / 550;
     border-radius: 20px;
     overflow: hidden;
   }
-  .app-detail-hero__img--second { display: none; }
+  .app-detail-hero__img--second { display: block; }
   .steps { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .hero__stats { grid-template-columns: repeat(2, 1fr); }
