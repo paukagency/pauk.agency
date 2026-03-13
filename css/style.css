@@ -1486,8 +1486,9 @@ a.btn:hover::after { transform: translateX(4px); }
   .sidebar__influencer-label { font-size: 16px; }
   .sidebar__influencer-desc { font-size: 12px; }
   .btn-login { padding: 12px 14px; font-size: 14px; border-radius: 12px; }
-  .sidebar { padding-bottom: 4px; }
-  .sidebar__lang { padding-bottom: 4px; }
+  .sidebar__nav { flex: 0 0 auto; }
+  .sidebar__lang { margin-bottom: 20px; }
+  .sidebar { padding-bottom: 0; }
 }
 
 @media (max-width: 1200px) {
