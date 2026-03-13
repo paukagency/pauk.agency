@@ -1172,7 +1172,17 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-hero__left .back-link { margin-bottom: 0; }
 
-.app-detail-hero__left .promo-block { margin-left: calc(88px + 24px); }
+.app-detail-hero__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.app-detail-hero__text .promo-block {
+  margin-top: 28px;
+}
 
 .app-detail-hero__inner {
   display: grid;
@@ -1191,7 +1201,6 @@ a.btn:hover::after { transform: translateX(4px); }
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding-right: 48px;
 }
 
 .app-detail-hero__top {
