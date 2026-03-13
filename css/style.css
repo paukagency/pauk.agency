@@ -249,6 +249,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   margin: 12px 12px 12px calc(var(--sidebar-w) + 24px);
   flex: 1;
   min-width: 0;
+  max-width: calc(1700px - var(--sidebar-w));
   display: flex;
   flex-direction: column;
   gap: 12px;
