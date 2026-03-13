@@ -1202,6 +1202,7 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-hero__text .promo-block {
   margin-top: 28px;
+  max-width: 480px;
 }
 
 .app-detail-hero__left {
