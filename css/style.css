@@ -1562,11 +1562,7 @@ a.btn:hover::after { transform: translateX(4px); }
   .sidebar { padding-bottom: 0; }
 }
 
-@media (max-width: 1200px) {
-  .section { padding: 64px 48px; }
-  .steps { grid-template-columns: repeat(2, 1fr); }
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-  .apps-catalog { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1400px) {
   .app-detail-hero { padding-right: 64px; }
   .app-detail-hero__visual {
     position: relative;
@@ -1589,6 +1585,13 @@ a.btn:hover::after { transform: translateX(4px); }
     overflow: hidden;
   }
   .app-detail-hero__img--second { display: block; }
+}
+
+@media (max-width: 1200px) {
+  .section { padding: 64px 48px; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .apps-catalog { grid-template-columns: repeat(2, 1fr); }
   .auth-section { grid-template-columns: 1fr; }
 }
 
