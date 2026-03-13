@@ -15,29 +15,24 @@
 ## File Structure
 ```
 /
-├── index.html                  # главная страница
+├── index.html                       # лендинг — витрина приложений + CTA для инфлюенсеров
 ├── pages/
-│   ├── apps.html               # каталог приложений
-│   ├── app-detail.html         # страница одного приложения
-│   ├── login.html              # авторизация
-│   └── dashboard.html          # кабинет инфлюенсера
+│   ├── apps.html                    # каталог всех приложений
+│   ├── app-detail.html              # шаблон страницы приложения (единый для всех)
+│   ├── login.html                   # единая точка входа (роль определяется после логина)
+│   ├── dashboard-influencer.html    # ЛК инфлюенсера
+│   ├── dashboard-developer.html     # ЛК стороннего разработчика (только статистика)
+│   └── dashboard-admin.html         # ЛК администратора Pauk.Agency (полный доступ)
 ├── css/
-│   └── style.css               # единый файл стилей
+│   └── style.css                    # единый файл стилей
 ├── js/
-│   ├── sidebar.js              # логика сайдбара (бургер, навигация)
-│   ├── i18n.js                 # система переводов
-│   ├── main.js                 # общая логика
+│   ├── sidebar.js                   # логика сайдбара (бургер, навигация)
+│   ├── i18n.js                      # система переводов
+│   ├── main.js                      # общая логика
 │   └── lang/
-│       ├── en.js
-│       ├── ru.js
-│       ├── es.js
-│       ├── de.js
-│       ├── fr.js
-│       ├── hi.js
-│       ├── it.js
-│       ├── pt.js
-│       └── zh.js
-└── .copilot/                   # инструкции для Copilot
+│       ├── en.js  ru.js  es.js  de.js
+│       └── fr.js  hi.js  it.js  pt.js  zh.js
+└── .copilot/                        # инструкции для Copilot
 ```
 
 ## Languages
