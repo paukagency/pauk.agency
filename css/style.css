@@ -1563,6 +1563,9 @@ a.btn:hover::after { transform: translateX(4px); }
   .app-detail-hero { padding-right: 64px; }
   .app-detail-hero__visual {
     position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
     width: 270px;
     height: 500px;
     margin-top: 32px;
