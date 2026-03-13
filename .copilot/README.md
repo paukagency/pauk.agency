@@ -15,6 +15,7 @@
 | [06-components.md](06-components.md) | HTML-структура всех компонентов |
 | [07-i18n.md](07-i18n.md) | Переводы: 9 языков, добавление ключей |
 | [09-platform-architecture.md](09-platform-architecture.md) | Роли, дашборды, app-detail шаблон, цветовые темы приложений |
+| [10-data-backend.md](10-data-backend.md) | localStorage mock, Supabase план, структура данных, RLS |
 
 ## Быстрые правила
 
