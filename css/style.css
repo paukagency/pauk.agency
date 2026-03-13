@@ -1482,7 +1482,7 @@ a.btn:hover::after { transform: translateX(4px); }
   .sidebar__nav { gap: 4px; }
 
   /* Influencer block more spacious */
-  .sidebar__influencer { margin: 0 16px; padding: 20px 18px; gap: 10px; }
+  .sidebar__influencer { margin: auto 16px 0; padding: 20px 18px; gap: 10px; }
   .sidebar__influencer-label { font-size: 16px; }
   .sidebar__influencer-desc { font-size: 12px; }
   .btn-login { padding: 12px 14px; font-size: 14px; border-radius: 12px; }
