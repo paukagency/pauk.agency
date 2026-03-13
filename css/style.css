@@ -1171,21 +1171,22 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 600px) 1fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0;
   align-items: stretch;
 }
 
 .app-detail-hero__visual {
   display: flex;
   align-items: stretch;
-  padding-right: 64px;
+  padding: 0 64px 0 0;
 }
 
 .app-detail-hero__left {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  padding-right: 48px;
 }
 
 .app-detail-hero__top {
@@ -1211,6 +1212,8 @@ a.btn:hover::after { transform: translateX(4px); }
   flex-shrink: 0;
   border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-detail-hero__img img {
@@ -1221,8 +1224,7 @@ a.btn:hover::after { transform: translateX(4px); }
 }
 
 .app-detail-hero__img-placeholder {
-  width: 100%;
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
