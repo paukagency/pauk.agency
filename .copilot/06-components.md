@@ -1,21 +1,35 @@
 # 06 — Components
 
 ## App Card (`.app-card`)
-Карточка приложения в каталоге. Flex row.
+Карточка приложения в каталоге.
+
+**Desktop:** Flex row — фото 250px слева, тело справа. `min-height: 350px`.
+
+**Mobile (≤720px): ОБЯЗАТЕЛЬНО вертикальный лэйаут** — колонка сверху вниз:
+1. `.app-card__photo` — полная ширина, фиксированная высота 200px
+2. `.app-card__name` — заголовок
+3. `.app-card__desc` — описание
+4. `.app-card__platforms` — иконки App Store / Google Play (order: -1 в footer)
+5. `.app-card__more` — CTA ссылка
+
+> ⚠️ Никогда не оставляй `flex-direction: row` на `.app-card` без мобильного `column`-переопределения — контент выйдет за границы карточки.
+
 ```html
 <a class="app-card" href="pages/app-detail.html">
   <div class="app-card__photo"><!-- иконка/изображение --></div>
   <div class="app-card__body">
-    <p class="app-card__category">...</p>
     <h3 class="app-card__name">...</h3>
     <p class="app-card__desc">...</p>
-    <div class="app-card__platforms"><!-- SVG иконки iOS/Android --></div>
+    <div class="app-card__footer">
+      <span class="app-card__more">Подробнее →</span>
+      <div class="app-card__platforms"><!-- SVG иконки iOS/Android --></div>
+    </div>
   </div>
 </a>
 ```
-- Высота: `min-height: 350px`
-- Ширина фото-колонки: `width: 250px`
-- 4-я карточка `.app-card--partner` — тёмная, hero-bg, без ссылки (`<div>`)
+- Десктоп ширина фото: `width: 250px`
+- Мобильная высота фото: `height: 200px`, `width: 100%`
+- 4-я карточка `.app-card--partner` — тёмная, hero-bg, без ссылки (`<div>`), на мобилке высота фото 160px
 
 ## Promo Block (`.promo-block`)
 Блок условий партнёрства.

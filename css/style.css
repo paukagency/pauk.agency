@@ -1661,4 +1661,25 @@ a.btn:hover::after { transform: translateX(4px); }
   .steps { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .hero__stats { grid-template-columns: repeat(2, 1fr); }
+
+  /* app-card: switch to vertical on mobile */
+  .app-card {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .app-card__photo {
+    width: 100%;
+    height: 200px;
+  }
+  .app-card__photo--partner {
+    width: 100%;
+    height: 160px;
+  }
+  /* Reorder footer: platform badges above CTA link */
+  .app-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .app-card__platforms { order: -1; }
 }
