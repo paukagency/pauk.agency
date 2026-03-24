@@ -130,6 +130,11 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   flex-shrink: 0;
   width: 18px;
   height: 18px;
+  transition: transform var(--transition);
+}
+
+.nav-item:hover .nav-icon {
+  transform: translateX(3px);
 }
 
 .nav-label {
@@ -241,6 +246,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .btn-login svg { stroke: #fff; flex-shrink: 0; }
 .btn-login:hover { background: rgba(255,255,255,0.24); }
+.btn-login:hover .nav-icon { transform: translateX(3px); }
 
 /* ============================================================
    MAIN CONTENT
@@ -258,7 +264,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 
 .section {
-  padding: 64px 64px;
+  padding: 40px 40px;
   background: var(--clr-card);
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
@@ -1187,14 +1193,14 @@ a.btn:hover::after { transform: translateX(4px); }
 
 .app-detail-hero {
   position: relative;
-  padding-right: calc(270px * 2 + 16px + 64px + 64px);
+  padding-right: calc(270px * 2 + 16px + 40px + 40px);
 }
 
 .app-detail-hero__visual {
   position: absolute;
-  top: 64px;
-  right: 64px;
-  bottom: 64px;
+  top: 40px;
+  right: 40px;
+  bottom: 40px;
   width: calc(270px * 2 + 16px);
   display: flex;
   gap: 16px;
@@ -1591,7 +1597,7 @@ a.btn:hover::after { transform: translateX(4px); }
 }
 
 @media (max-width: 1400px) {
-  .app-detail-hero { padding-right: 64px; }
+  .app-detail-hero { padding-right: 40px; }
   .app-detail-hero__visual {
     position: relative;
     top: auto;
@@ -1617,7 +1623,7 @@ a.btn:hover::after { transform: translateX(4px); }
 }
 
 @media (max-width: 1200px) {
-  .section { padding: 64px 48px; }
+  .section { padding: 40px 32px; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
   .apps-catalog { grid-template-columns: repeat(2, 1fr); }
@@ -1636,7 +1642,7 @@ a.btn:hover::after { transform: translateX(4px); }
 }
 
 @media (max-width: 720px) {
-  .section { padding: 40px 24px; }
+  .section { padding: 28px 20px; }
   .footer { padding: 24px; flex-direction: column; gap: 6px; text-align: center; }
   .app-detail-hero__visual {
     display: flex;
